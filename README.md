@@ -14,32 +14,32 @@ I extracted this data in "data" folder
 
 #### Download and extract 
 
-download and extract the data form above give location to "data" dir and extract it 
+ddownloaded and extracted the data form above give location to "data" dir and extracted it 
 
 #### Read the data from files in "data/UCI HAR Dataset" folder from files :
 
 #####for training -
-./data/UCI HAR Dataset/test/subject_test.txt
-./data/UCI HAR Dataset/test/X_test.txt
-./data/UCI HAR Dataset/test/y_test.txt
+./data/UCI HAR Dataset/test/subject_test.txt <br>
+./data/UCI HAR Dataset/test/X_test.txt <br>
+./data/UCI HAR Dataset/test/y_test.txt <br>
 
 #####for test -
 
- ./data/UCI HAR Dataset/train/subject_train.txt
- ./data/UCI HAR Dataset/train/X_train.txt
- ./data/UCI HAR Dataset/train/y_train.txt
+ ./data/UCI HAR Dataset/train/subject_train.txt <br>
+ ./data/UCI HAR Dataset/train/X_train.txt <br>
+ ./data/UCI HAR Dataset/train/y_train.txt <br>
 
 
 #### Bind the test and training data in variable 
- subject -- for test and training subject 
- X  -- for X_test and X_train
- y - - for y_test and y_train 
+ subject -- for test and training subject <br>
+ X  -- for X_test and X_train <br>
+ y - - for y_test and y_train <br>
  
 #### Changed the column names for above data sets 
  
- subject -- with column name 'subject'
- X -- with column names in data/UCI HAR Dataset/features.txt
- y -- with column name 'activity'
+ subject -- with column name 'subject' <br>
+ X -- with column names in data/UCI HAR Dataset/features.txt <br>
+ y -- with column name 'activity' <br>
  
 #### Extracts mean and std 
 
