@@ -1,6 +1,12 @@
 createTidyDataSet <- function (){
 
+  
   library(reshape2)
+  
+  if(!file.exists("./data")){dir.create("./data")}
+  fileUrl = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+  download.file(fileUrl,destfile="./data/dataset.zip",method="curl")
+  unzip("./data/dataset.zip",exdir = "./data")
   
   # read the training and the test sets to create one data set.
   
@@ -49,6 +55,6 @@ createTidyDataSet <- function (){
   datasetMelt <- melt(dataset,id=c("subject","activity_name"),measure.vars=colnames(X_mean_std))  # melt the data
   tidyDataset <- dcast(datasetMelt, subject+activity_name ~ variable,mean) # casting the data set
   
-  write.csv(tidyDataset, file = "tidyDataset.txt")
+  write.csv(tidyDataset, file = "tidyDataset.txt",row.names=FALSE)
   
 }
